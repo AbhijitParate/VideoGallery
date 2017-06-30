@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:background="@color/black_overlay"
+        android:id="@+id/linearLayout">
+        <!--<TextView-->
+            <!--android:id="@+id/playerVideoTitle"-->
+            <!--android:text="Video title"-->
+            <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
+            <!--style="@style/PlayerControl.Text"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_margin="4dp"/>-->
+        <!--<ImageButton-->
+            <!--android:id="@+id/playerControlPlaylist"-->
+            <!--android:src="@drawable/ic_player_control_playlist"-->
+            <!--style="@style/PlayerControl"/>-->
+
+        <ImageButton
+            android:id="@+id/playerControlVolume"
+            android:src="@drawable/ic_player_control_volume"
+            style="@style/PlayerControl"
+            android:contentDescription="Volume Control" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/playerControlVolumeSeekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="15"
+        android:visibility="gone"
+        android:progressDrawable="@drawable/seekbar_style"
+        android:thumb="@drawable/seekbar_thumb"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_overlay"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/ll_controls"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/playerControlPrevious"
+                android:src="@drawable/ic_player_control_previous"
+                style="@style/PlayerControl"/>
+            <ImageButton
+                android:id="@+id/playerControlRewind"
+                android:src="@drawable/ic_player_control_rewind"
+                style="@style/PlayerControl"/>
+            <ImageButton
+                android:id="@+id/playerControlPlayPause"
+                android:src="@drawable/ic_player_control_play"
+                style="@style/PlayerControl"/>
+            <ImageButton
+                android:id="@+id/playerControlFastForward"
+                android:src="@drawable/ic_player_control_fast_forward"
+                style="@style/PlayerControl"/>
+            <ImageButton
+                android:id="@+id/playerControlNext"
+                android:src="@drawable/ic_player_control_next"
+                style="@style/PlayerControl"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/ll_controls">
+            <TextView
+                android:id="@+id/playerElapsedTime"
+                android:text="00.00"
+                style="@style/PlayerControl.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <SeekBar
+                android:id="@+id/playerControlSeekBar"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/seekbar_style"
+                android:thumb="@drawable/seekbar_thumb"/>
+            <TextView
+                android:id="@+id/playerTotalTime"
+                android:text="00.00"
+                style="@style/PlayerControl.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

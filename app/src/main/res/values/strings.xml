@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VideoGallery</string>
+
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_fullscreen_video">FullscreenVideoActivity</string>
+
+    <string name="selected_count">%1$d selected</string>
+</resources>
